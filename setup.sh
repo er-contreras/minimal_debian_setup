@@ -5,7 +5,9 @@ apt update && apt upgrade -y
 
 ### --- Base tools ---
 echo ">>> Installing base tools..."
-apt install -y sudo stow git make build-essential unzip wget curl cmake ninja-build gettext alsa-utils blueman okular libxcomposite-dev libxdamage-dev libxrandr-dev libconfig-dev libdbus-1-dev libglx-dev libgl-dev libdrm-dev libpcre3-dev libxft-dev libxinerama-dev
+apt install -y sudo stow git make build-essential unzip wget curl cmake ninja-build gettext alsa-utils blueman okular \
+  libxcomposite-dev libxdamage-dev libxrandr-dev libconfig-dev libdbus-1-dev libglx-dev libgl-dev libdrm-dev libpcre3-dev \
+  libxft-dev libxinerama-dev
 
 ### --- Dotfiles ---
 echo ">>> Setting up dotfiles..."
