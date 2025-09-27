@@ -5,7 +5,7 @@ apt update && apt upgrade -y
 
 ### --- Base tools ---
 echo ">>> Installing base tools..."
-apt install -y sudo stow git make build-essential unzip wget curl cmake ninja-build gettext alsa-utils blueman okular
+apt install -y sudo stow git make build-essential unzip wget curl cmake ninja-build gettext alsa-utils blueman okular libxcomposite-dev libxdamage-dev libxrandr-dev libconfig-dev libdbus-1-dev libglx-dev libgl-dev libdrm-dev libpcre3-dev libxft-dev libxinerama-dev
 
 ### --- Dotfiles ---
 echo ">>> Setting up dotfiles..."
@@ -48,7 +48,7 @@ fc-cache -fv
 
 ### --- Neovim ---
 echo ">>> Installing Neovim..."
-cd /usr/local/src
+cd
 if [ ! -d neovim ]; then
     git clone https://github.com/neovim/neovim
 fi
@@ -58,7 +58,7 @@ sudo make install
 
 ### --- Compton ---
 echo ">>> Installing compton..."
-cd /usr/local/src
+cd ~/.config
 if [ ! -d compton ]; then
     git clone https://github.com/chjj/compton
 fi
